@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Career Navigator | Smart Placement Preparation Portal</title>
+<meta name="description" content="AI Career Navigator is a smart, all-in-one placement preparation portal for engineering students — track DSA, aptitude, resume readiness, and mock interviews in one dashboard.">
+
+<!-- Google Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (data/code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div id="preloader" aria-hidden="true">
+  <div class="radar-loader">
+    <span></span><span></span><span></span>
+  </div>
+</div>
+
+<!-- ============ SKIP LINK (Accessibility) ============ -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="brand" data-nav-link>
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <circle cx="15" cy="15" r="13" stroke="currentColor" stroke-width="1.6" opacity="0.45"/>
+          <circle cx="15" cy="15" r="8" stroke="currentColor" stroke-width="1.6" opacity="0.75"/>
+          <path d="M15 15 L21 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="15" cy="15" r="2" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand-text">Career<b>Navigator</b></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#home" class="nav-link" data-nav-link>Home</a>
+      <a href="#features" class="nav-link" data-nav-link>Features</a>
+      <a href="#roadmap-preview" class="nav-link" data-nav-link>Roadmap</a>
+      <a href="#testimonials" class="nav-link" data-nav-link>Testimonials</a>
+      <a href="#faq" class="nav-link" data-nav-link>FAQ</a>
+      <a href="#contact" class="nav-link" data-nav-link>Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark and light theme" title="Toggle theme">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2 12h2.4M19.6 12H22M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 14.7A8.6 8.6 0 1 1 9.3 3.4a7 7 0 0 0 11.3 11.3Z"/></svg>
+      </button>
+      <button class="btn btn-primary btn-small" id="launchDashboardBtn" type="button">Launch Dashboard</button>
+      <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<!-- ==================  LANDING PAGE (MARKETING)  =============== -->
+<!-- ============================================================ -->
+<main id="main-content">
+<div id="landingView">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-copy">
+        <p class="eyebrow">Placement Season 2026-27 · AI-Assisted Prep</p>
+        <h1 class="hero-title">Plot your course from campus to career.</h1>
+        <p class="hero-sub">One navigator for every coordinate of placement prep — DSA, aptitude, resume, and interviews — with a live bearing on how close you are to offer-ready.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="heroCta" type="button">Start Navigating — It's Free</button>
+          <a href="#features" class="btn btn-ghost" data-nav-link>See how it works</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><strong id="statStudents">12,400+</strong><span>Students onboard</span></div>
+          <div class="trust-item"><strong>580+</strong><span>DSA &amp; aptitude drills</span></div>
+          <div class="trust-item"><strong>92%</strong><span>Report interview confidence</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 420" class="radar-svg">
+          <defs>
+            <radialGradient id="radarFade" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="210" cy="210" r="190" class="radar-ring"/>
+          <circle cx="210" cy="210" r="140" class="radar-ring"/>
+          <circle cx="210" cy="210" r="90" class="radar-ring"/>
+          <circle cx="210" cy="210" r="40" class="radar-ring"/>
+          <line x1="20" y1="210" x2="400" y2="210" class="radar-cross"/>
+          <line x1="210" y1="20" x2="210" y2="400" class="radar-cross"/>
+          <g class="radar-sweep">
+            <path d="M210 210 L210 20 A190 190 0 0 1 331 74 Z" fill="url(#radarFade)"/>
+          </g>
+          <!-- blips = milestones -->
+          <circle class="radar-blip" cx="290" cy="140" r="5"/>
+          <circle class="radar-blip" cx="150" cy="260" r="5"/>
+          <circle class="radar-blip" cx="260" cy="300" r="5"/>
+          <circle class="radar-blip" cx="130" cy="130" r="5"/>
+          <circle cx="210" cy="210" r="6" fill="var(--accent-2)"/>
+        </svg>
+        <div class="hero-badge card-float">
+          <span class="badge-label">Readiness score</span>
+          <span class="badge-value" id="heroReadiness">78%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGO / STATS STRIP ============ -->
+  <section class="stats-strip">
+    <div class="stats-strip-inner">
+      <p>Built for students preparing across <strong>TCS NQT</strong>, <strong>Infosys</strong>, <strong>Wipro</strong>, <strong>Cognizant GenC</strong>, <strong>Accenture</strong> and product-based interviews.</p>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="features" id="features">
+    <div class="section-head">
+      <p class="eyebrow">Flight instruments</p>
+      <h2>Every gauge you need on one dashboard</h2>
+      <p class="section-desc">No more switching between five different apps and a stack of sticky notes. Track it all from a single console.</p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <div class="feature-icon" style="--fi:0"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19h16M4 19V9l5-4 5 4v10M14 19v-6h4v6"/></svg></div>
+        <h3>Placement Roadmap</h3>
+        <p>A charted flight-path from fundamentals to offer letter, broken into milestones you can actually finish.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon" style="--fi:1"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></div>
+        <h3>DSA Tracker</h3>
+        <p>Topic-wise problem tracking across arrays, trees, DP and graphs, with a live completion bearing.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon" style="--fi:2"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3v18M4 8l5-5 5 5M13 7h7M13 12h7M13 17h4"/></svg></div>
+        <h3>Aptitude Prep</h3>
+        <p>Quant, logical and verbal sections tracked separately, so no topic silently falls behind.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon" style="--fi:3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v5h5M6 3h8l5 5v13H6V3Z"/><path d="M9 14h6M9 17h4"/></svg></div>
+        <h3>Resume Analyzer</h3>
+        <p>Paste your resume and get an instant ATS-style keyword and structure scan — no upload needed.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon" style="--fi:4"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a4 4 0 0 1 4 4v2a4 4 0 1 1-8 0V7a4 4 0 0 1 4-4Z"/><path d="M6 11v1a6 6 0 0 0 12 0v-1M12 18v3"/></svg></div>
+        <h3>AI Interview Prep</h3>
+        <p>Flip through curated HR &amp; technical question cards, filterable by role and difficulty.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon" style="--fi:5"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+        <h3>Mock Interview Scheduler</h3>
+        <p>Book, reschedule and track upcoming mock rounds — all saved locally, no sign-up required.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ ROADMAP PREVIEW (marketing teaser) ============ -->
+  <section class="roadmap-preview" id="roadmap-preview">
+    <div class="section-head">
+      <p class="eyebrow">The flight path</p>
+      <h2>From first principles to final offer</h2>
+    </div>
+    <div class="path-preview" role="list">
+      <div class="path-node" role="listitem"><span class="path-dot">1</span><p>Foundations<br><small>Language + CS core</small></p></div>
+      <div class="path-node" role="listitem"><span class="path-dot">2</span><p>DSA Mastery<br><small>Patterns &amp; practice</small></p></div>
+      <div class="path-node" role="listitem"><span class="path-dot">3</span><p>Aptitude Drills<br><small>Speed + accuracy</small></p></div>
+      <div class="path-node" role="listitem"><span class="path-dot">4</span><p>Resume + Portfolio<br><small>ATS ready</small></p></div>
+      <div class="path-node" role="listitem"><span class="path-dot">5</span><p>Mock Interviews<br><small>HR + Technical</small></p></div>
+      <div class="path-node" role="listitem"><span class="path-dot">6</span><p>Offer Letter<br><small>Touchdown 🎯</small></p></div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-head">
+      <p class="eyebrow">Signal reports</p>
+      <h2>Students who found their bearing</h2>
+    </div>
+    <div class="testimonial-carousel">
+      <button class="carousel-btn" id="testimonialPrev" aria-label="Previous testimonial">&#8592;</button>
+      <div class="testimonial-track-wrap">
+        <div class="testimonial-track" id="testimonialTrack">
+          <blockquote class="testimonial-card">
+            <p>"The DSA tracker is the reason I stopped losing track of what I'd actually revised. Cleared TCS NQT on the first attempt."</p>
+            <footer><strong>Ananya R.</strong><span>B.Tech CSE, 2026</span></footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>"Resume analyzer flagged three missing keywords recruiters were literally filtering on. Fixed it in ten minutes."</p>
+            <footer><strong>Rahul M.</strong><span>B.Tech IT, 2027</span></footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>"Mock interview scheduler kept me accountable — seeing the countdown on my dashboard made me actually prep."</p>
+            <footer><strong>Sneha K.</strong><span>B.Tech ECE, 2026</span></footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>"The analytics view is oddly motivating. Watching the radar chart fill in felt like a game I wanted to win."</p>
+            <footer><strong>Vikram S.</strong><span>B.Tech CSE (AI/ML), 2027</span></footer>
+          </blockquote>
+        </div>
+      </div>
+      <button class="carousel-btn" id="testimonialNext" aria-label="Next testimonial">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <div class="section-head">
+      <p class="eyebrow">Pre-flight briefing</p>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Is my progress saved if I close the browser?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>Yes. Every tracker on this portal uses your browser's LocalStorage, so your DSA progress, aptitude progress, scheduled mock interviews and resume scans persist between sessions on the same browser and device.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Does the Resume Analyzer send my resume anywhere?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>No. The analyzer runs entirely in JavaScript in your browser. Nothing is uploaded to a server — it simply scans the text you paste for keyword coverage and formatting patterns.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do I need to create an account?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>No sign-up is required. The portal is designed as a fully client-side application — open it, and your dashboard is ready to use immediately.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can I use this on my phone?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>Yes. The interface is built mobile-first with responsive layouts for phones, tablets and desktops, including a collapsible sidebar and touch-friendly controls.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What happens if I clear my browser data?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>Since progress lives in LocalStorage, clearing site data or browser storage will reset your trackers. Consider this when working across multiple devices or browsers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <p class="eyebrow">Ground control</p>
+        <h2>Have a question or feature request?</h2>
+        <p class="section-desc">Send a transmission — we read every message and use it to plan the next release.</p>
+        <ul class="contact-meta">
+          <li>📍 Vijayawada, Andhra Pradesh, India</li>
+          <li>✉️ support@careernavigator.app</li>
+          <li>🕒 Mon–Sat, 9:00 AM – 7:00 PM IST</li>
+        </ul>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="cf-name">Full name</label>
+          <input type="text" id="cf-name" name="name" placeholder="e.g. Gujapaneni Shashank" autocomplete="name">
+          <span class="form-error" id="err-name"></span>
+        </div>
+        <div class="form-row">
+          <label for="cf-email">Email address</label>
+          <input type="email" id="cf-email" name="email" placeholder="you@example.com" autocomplete="email">
+          <span class="form-error" id="err-email"></span>
+        </div>
+        <div class="form-row">
+          <label for="cf-subject">Subject</label>
+          <select id="cf-subject" name="subject">
+            <option value="">Choose a topic</option>
+            <option value="bug">Report a bug</option>
+            <option value="feature">Request a feature</option>
+            <option value="general">General question</option>
+          </select>
+          <span class="form-error" id="err-subject"></span>
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="4" placeholder="Tell us what's on your mind..."></textarea>
+          <span class="form-error" id="err-message"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send message</button>
+        <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="brand" data-nav-link>
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="13" stroke="currentColor" stroke-width="1.6" opacity="0.45"/><circle cx="15" cy="15" r="8" stroke="currentColor" stroke-width="1.6" opacity="0.75"/><path d="M15 15 L21 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="15" r="2" fill="currentColor"/></svg>
+          </span>
+          <span class="brand-text">Career<b>Navigator</b></span>
+        </a>
+        <p class="footer-tag">Smart placement preparation, charted like a flight plan.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features" data-nav-link>Features</a>
+        <a href="#roadmap-preview" data-nav-link>Roadmap</a>
+        <a href="#" id="footerDashboardLink">Dashboard</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#testimonials" data-nav-link>Testimonials</a>
+        <a href="#faq" data-nav-link>FAQ</a>
+        <a href="#contact" data-nav-link>Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> AI Career Navigator. Built as an academic frontend showcase project.</p>
+    </div>
+  </footer>
+
+</div><!-- /#landingView -->
+
+<!-- ============================================================ -->
+<!-- ==================  DASHBOARD APP (SPA)  ==================== -->
+<!-- ============================================================ -->
+<div class="app" id="appView" hidden>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="13" stroke="currentColor" stroke-width="1.6" opacity="0.45"/><circle cx="15" cy="15" r="8" stroke="currentColor" stroke-width="1.6" opacity="0.75"/><path d="M15 15 L21 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="15" r="2" fill="currentColor"/></svg></span>
+      <span class="brand-text">Navigator</span>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Dashboard sections">
+      <button class="side-link active" data-view="dashboard" type="button"><span class="side-icon">🧭</span>Dashboard</button>
+      <button class="side-link" data-view="roadmap" type="button"><span class="side-icon">🛤️</span>Roadmap</button>
+      <button class="side-link" data-view="dsa" type="button"><span class="side-icon">🧩</span>DSA Tracker</button>
+      <button class="side-link" data-view="aptitude" type="button"><span class="side-icon">🧮</span>Aptitude Tracker</button>
+      <button class="side-link" data-view="resume" type="button"><span class="side-icon">📄</span>Resume Analyzer</button>
+      <button class="side-link" data-view="interview" type="button"><span class="side-icon">🎤</span>Interview Prep</button>
+      <button class="side-link" data-view="scheduler" type="button"><span class="side-icon">📅</span>Mock Scheduler</button>
+      <button class="side-link" data-view="analytics" type="button"><span class="side-icon">📊</span>Analytics</button>
+    </nav>
+
+    <button class="btn btn-ghost btn-small sidebar-exit" id="exitDashboardBtn" type="button">&#8592; Back to site</button>
+  </aside>
+
+  <div class="app-main">
+    <header class="app-topbar">
+      <button class="icon-btn sidebar-toggle" id="sidebarToggleBtn" aria-label="Toggle sidebar" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <div class="topbar-search">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="search" id="globalSearch" placeholder="Search topics, questions, FAQs..." aria-label="Search the portal">
+        <div class="search-results" id="searchResults" hidden></div>
+      </div>
+
+      <div class="topbar-actions">
+        <span class="readiness-pill" id="topbarReadiness">Readiness: 0%</span>
+        <button class="icon-btn" id="themeToggle2" type="button" aria-label="Toggle theme">
+          <svg class="icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2 12h2.4M19.6 12H22M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+          <svg class="icon-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 14.7A8.6 8.6 0 1 1 9.3 3.4a7 7 0 0 0 11.3 11.3Z"/></svg>
+        </button>
+        <div class="avatar" title="Guest Student">GS</div>
+      </div>
+    </header>
+
+    <div class="app-content">
+
+      <!-- ============ VIEW: DASHBOARD ============ -->
+      <section class="view active" id="view-dashboard" data-title="Dashboard">
+        <div class="view-head">
+          <div>
+            <h1>Welcome back, Navigator 👋</h1>
+            <p class="view-sub">Here's your current bearing across every prep track.</p>
+          </div>
+          <span class="date-chip" id="todayDate"></span>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <p class="kpi-label">DSA Progress</p>
+            <p class="kpi-value" id="kpiDsa">0%</p>
+            <div class="kpi-bar"><div class="kpi-fill" id="kpiDsaFill" style="--fi:0"></div></div>
+          </div>
+          <div class="kpi-card">
+            <p class="kpi-label">Aptitude Progress</p>
+            <p class="kpi-value" id="kpiApt">0%</p>
+            <div class="kpi-bar"><div class="kpi-fill" id="kpiAptFill" style="--fi:1"></div></div>
+          </div>
+          <div class="kpi-card">
+            <p class="kpi-label">Resume Score</p>
+            <p class="kpi-value" id="kpiResume">--</p>
+            <div class="kpi-bar"><div class="kpi-fill" id="kpiResumeFill" style="--fi:2"></div></div>
+          </div>
+          <div class="kpi-card">
+            <p class="kpi-label">Mock Interviews Booked</p>
+            <p class="kpi-value" id="kpiMock">0</p>
+            <div class="kpi-bar"><div class="kpi-fill" id="kpiMockFill" style="--fi:3"></div></div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="panel">
+            <h3>Weekly activity</h3>
+            <canvas id="chartWeekly" width="560" height="230" role="img" aria-label="Bar chart of weekly study activity"></canvas>
+          </div>
+          <div class="panel">
+            <h3>Upcoming</h3>
+            <ul class="upcoming-list" id="upcomingList">
+              <li class="empty-state">No mock interviews scheduled yet.</li>
+            </ul>
+            <button class="btn btn-secondary btn-small" data-view-link="scheduler">Schedule one now</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VIEW: ROADMAP ============ -->
+      <section class="view" id="view-roadmap" data-title="Placement Roadmap">
+        <div class="view-head">
+          <div><h1>Placement Roadmap</h1><p class="view-sub">Your charted course from fundamentals to offer letter.</p></div>
+        </div>
+        <div class="timeline" id="roadmapTimeline"><!-- populated by JS --></div>
+      </section>
+
+      <!-- ============ VIEW: DSA TRACKER ============ -->
+      <section class="view" id="view-dsa" data-title="DSA Tracker">
+        <div class="view-head">
+          <div><h1>DSA Tracker</h1><p class="view-sub">Mark topics as you finish revising and solving.</p></div>
+          <span class="progress-chip" id="dsaProgressChip">0 / 0 complete</span>
+        </div>
+        <div class="tracker-toolbar">
+          <input type="text" id="dsaFilter" placeholder="Filter topics (e.g. tree, graph, DP)...">
+          <button class="btn btn-ghost btn-small" id="dsaResetBtn" type="button">Reset progress</button>
+        </div>
+        <div class="tracker-grid" id="dsaGrid"><!-- populated by JS --></div>
+      </section>
+
+      <!-- ============ VIEW: APTITUDE TRACKER ============ -->
+      <section class="view" id="view-aptitude" data-title="Aptitude Tracker">
+        <div class="view-head">
+          <div><h1>Aptitude Tracker</h1><p class="view-sub">Quantitative, logical reasoning and verbal ability — tracked separately.</p></div>
+          <span class="progress-chip" id="aptProgressChip">0 / 0 complete</span>
+        </div>
+        <div class="apt-tabs" id="aptTabs">
+          <button class="apt-tab active" data-cat="Quantitative" type="button">Quantitative</button>
+          <button class="apt-tab" data-cat="Logical Reasoning" type="button">Logical Reasoning</button>
+          <button class="apt-tab" data-cat="Verbal Ability" type="button">Verbal Ability</button>
+        </div>
+        <div class="tracker-grid" id="aptGrid"><!-- populated by JS --></div>
+      </section>
+
+      <!-- ============ VIEW: RESUME ANALYZER ============ -->
+      <section class="view" id="view-resume" data-title="Resume Analyzer">
+        <div class="view-head">
+          <div><h1>Resume Analyzer</h1><p class="view-sub">Paste your resume text below for an instant client-side ATS scan. Nothing leaves your browser.</p></div>
+        </div>
+        <div class="resume-grid">
+          <div class="panel">
+            <label for="resumeInput" class="panel-label">Resume text</label>
+            <textarea id="resumeInput" rows="14" placeholder="Paste your resume content here (plain text)..."></textarea>
+            <div class="resume-target-row">
+              <label for="targetRole">Target role keywords</label>
+              <select id="targetRole">
+                <option value="fullstack">Full Stack Developer</option>
+                <option value="aiml">AI / ML Engineer</option>
+                <option value="dataanalyst">Data Analyst</option>
+                <option value="generalsde">General SDE / IT Services</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" id="analyzeResumeBtn" type="button">Analyze resume</button>
+          </div>
+          <div class="panel resume-result" id="resumeResult">
+            <div class="empty-state-block">
+              <p>🧭 Your ATS readiness report will appear here.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VIEW: INTERVIEW PREP ============ -->
+      <section class="view" id="view-interview" data-title="AI Interview Prep">
+        <div class="view-head">
+          <div><h1>AI Interview Prep</h1><p class="view-sub">Flip a card to reveal a model answer. Filter by category to focus your session.</p></div>
+        </div>
+        <div class="interview-filters" id="interviewFilters">
+          <button class="chip active" data-cat="all" type="button">All</button>
+          <button class="chip" data-cat="HR" type="button">HR</button>
+          <button class="chip" data-cat="Technical" type="button">Technical</button>
+          <button class="chip" data-cat="Behavioral" type="button">Behavioral</button>
+        </div>
+        <div class="flashcard-grid" id="flashcardGrid"><!-- populated by JS --></div>
+      </section>
+
+      <!-- ============ VIEW: MOCK SCHEDULER ============ -->
+      <section class="view" id="view-scheduler" data-title="Mock Interview Scheduler">
+        <div class="view-head">
+          <div><h1>Mock Interview Scheduler</h1><p class="view-sub">Plan your mock rounds and keep every session accounted for.</p></div>
+        </div>
+        <div class="scheduler-grid">
+          <form class="panel" id="schedulerForm">
+            <h3>Book a session</h3>
+            <div class="form-row">
+              <label for="mockRole">Role / round type</label>
+              <select id="mockRole">
+                <option>Technical Round — DSA</option>
+                <option>Technical Round — Core CS</option>
+                <option>HR Round</option>
+                <option>Managerial Round</option>
+                <option>Group Discussion</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="mockDate">Date</label>
+              <input type="date" id="mockDate" required>
+            </div>
+            <div class="form-row">
+              <label for="mockTime">Time</label>
+              <input type="time" id="mockTime" required>
+            </div>
+            <div class="form-row">
+              <label for="mockPartner">With (peer / mentor name)</label>
+              <input type="text" id="mockPartner" placeholder="e.g. Placement Cell Mentor">
+            </div>
+            <span class="form-error" id="err-mock"></span>
+            <button type="submit" class="btn btn-primary btn-full">Schedule session</button>
+          </form>
+
+          <div class="panel">
+            <h3>Your scheduled sessions</h3>
+            <ul class="session-list" id="sessionList">
+              <li class="empty-state">No sessions booked yet — plan your first one!</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VIEW: ANALYTICS ============ -->
+      <section class="view" id="view-analytics" data-title="Progress Analytics">
+        <div class="view-head">
+          <div><h1>Progress Analytics</h1><p class="view-sub">A full instrument panel on your preparation trajectory.</p></div>
+        </div>
+        <div class="analytics-grid">
+          <div class="panel">
+            <h3>Topic completion by track</h3>
+            <canvas id="chartDonut" width="260" height="260" role="img" aria-label="Donut chart of topic completion by track"></canvas>
+            <div class="legend" id="donutLegend"></div>
+          </div>
+          <div class="panel">
+            <h3>DSA topic breakdown</h3>
+            <canvas id="chartBarDsa" width="500" height="260" role="img" aria-label="Bar chart of DSA topics completed vs total"></canvas>
+          </div>
+          <div class="panel panel-wide">
+            <h3>Readiness trend (last 8 weeks, simulated)</h3>
+            <canvas id="chartLine" width="900" height="240" role="img" aria-label="Line chart of readiness trend over 8 weeks"></canvas>
+          </div>
+          <div class="panel">
+            <h3>Overall readiness radar</h3>
+            <canvas id="chartRadar" width="320" height="320" role="img" aria-label="Radar chart of overall readiness across five tracks"></canvas>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /.app-content -->
+  </div><!-- /.app-main -->
+</div><!-- /#appView -->
+
+</main>
+
+<!-- Toast container -->
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
